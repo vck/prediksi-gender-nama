@@ -1,0 +1,14 @@
+<html>
+
+{%if data%}
+   <p>nama: {{nama}}</p>
+   <p>kemungkinan besar: {{data[0]}}</p>
+   <p>perempuan: {{data[1]}}%</p>
+   <p>laki-laki: {{data[2]}}%</p>
+{%endif%}
+
+<form action="/predict" method="post">
+   <input type="text" name="nama">
+   <input type="submit">
+</form>
+
